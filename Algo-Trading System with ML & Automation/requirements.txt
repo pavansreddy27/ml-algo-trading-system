@@ -1,0 +1,8 @@
+yfinance
+pandas
+numpy
+scikit-learn
+ta
+gspread
+oauth2client
+python-telegram-bot==13.15
