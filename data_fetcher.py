@@ -3,7 +3,7 @@
 import yfinance as yf
 import pandas as pd
 
-def fetch_stock_data(ticker, period="1y", interval="1d"):
+def fetch_stock_data(ticker, period="",6mo interval="1d"):
 
     data = yf.download(ticker, period=period, interval=interval, progress=False, auto_adjust=False)
     data.dropna(inplace=True)
