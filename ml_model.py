@@ -43,12 +43,9 @@ def train_ml_model(df):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
 
-    print(f"✅ ML Model Accuracy: {round(accuracy * 100, 2)}%")
-
     # Predict latest signal
     latest_features = X.iloc[-1].values.reshape(1, -1)
     latest_df = pd.DataFrame(latest_features, columns=X.columns)
     prediction = model.predict(latest_df)[0]
-    print("📈 Next-day Prediction:", "UP" if prediction == 1 else "DOWN")
 
     return model, accuracy, prediction
